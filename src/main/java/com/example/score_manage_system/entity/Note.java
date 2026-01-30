@@ -19,9 +19,11 @@ public class Note {
     private Long id;
 
     @ManyToOne
+    @JoinColumn(name = "etudiant_matricule", nullable = false)  // ← Changé de etudiant_id à etudiant_matricule
     private Etudiant etudiant;
 
     @ManyToOne
+    @JoinColumn(name = "matiere_code", nullable = false)
     private Matiere matiere;
 
     private double valeur;
